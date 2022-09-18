@@ -5,7 +5,7 @@ pipeline {
         stage ('Compile Stage') {
 
             steps {
-                  sh 'cho $JOB_NAME'
+                  sh 'echo $JOB_NAME'
                 withMaven(maven : 'MAVEN_HOME') {
                     sh 'mvn clean compile'
                 }
