@@ -1,5 +1,8 @@
 pipeline {
-    agent any
+    def job_name = '$JOB_NAME'
+    String[] arr= job_name.split('/');
+    
+    agent {label '${arr[1]}'}
 
     stages {
         stage ('Compile Stage') {
