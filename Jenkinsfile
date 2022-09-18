@@ -1,6 +1,6 @@
 pipeline {
-    def job_name = '$JOB_NAME'
-    String[] arr= job_name.split('/');
+    def job_name='$JOB_NAME'
+    String[] arr=job_name.split('/');
     
     agent {label '${arr[1]}'}
 
