@@ -5,7 +5,7 @@ pipeline {
         stage ('Compile Stage') {
 
             steps {
-                echo 'Hello from develop'
+                echo 'Hello from develop once more'
                 withMaven(maven : 'MAVEN_HOME') {
                     sh 'mvn clean compile'
                 }
