@@ -6,7 +6,7 @@ pipeline {
         stage ('Compile Stage') {
 
             steps {
-                  
+                echo 'hello from master'  
                 withMaven(maven : 'MAVEN_HOME') {
                     sh 'mvn clean compile'
                 }
