@@ -1,14 +1,12 @@
-pipeline {
-    def job_name='$JOB_NAME'
-    String[] arr=job_name.split('/');
+pipeline {    
     
-    agent {label '${arr[1]}'}
+    agent {label 'master'}
 
     stages {
         stage ('Compile Stage') {
 
             steps {
-                  sh 'echo $JOB_NAME'
+                  
                 withMaven(maven : 'MAVEN_HOME') {
                     sh 'mvn clean compile'
                 }
