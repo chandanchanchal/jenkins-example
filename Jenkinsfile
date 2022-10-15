@@ -1,5 +1,5 @@
 pipeline {
-    agent {label 'develop'}
+    agent {label 'feature'}
 
     stages {
         stage ('Compile Stage') {
