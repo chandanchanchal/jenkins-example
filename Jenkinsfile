@@ -1,6 +1,6 @@
 pipeline {    
     
-    agent {label 'dev'}
+    agent {label 'devops'}
 
     stages {
         stage ('Compile Stage') {
